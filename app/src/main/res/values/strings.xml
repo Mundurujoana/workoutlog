@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">WorkoutLog</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="create_account">Create Account</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="Email">Email</string>
+    <string name="login_heading">Login</string>
+    <string name="don_t_have_an_account_yet">Don\'t have an Account yet?</string>
+    <string name="password_two">Password</string>
+    <string name="comfirm_password">Comfirm password</string>
+    <string name="sign_up">SignUp</string>
+    <string name="login_2">login</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="email_login">Email</string>
+    <string name="password_login">Password</string>
+    <string name="login_btn">login</string>
+    <string name="signup_login">SignUp</string>
 </resources>
