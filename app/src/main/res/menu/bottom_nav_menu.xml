@@ -4,15 +4,15 @@
         android:id="@+id/plan"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="Plan"/>
+        android:title="@string/plan"/>
     <item
         android:id="@+id/track"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_graphic_eq_24"
-        android:title="Track"/>
+        android:title="@string/track"/>
     <item
         android:id="@+id/profile"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_people_24"
-        android:title="Profile"/>
+        android:title="@string/profile"/>
 </menu>
