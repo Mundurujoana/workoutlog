@@ -30,9 +30,6 @@ class LoginActivity : AppCompatActivity() {
         tvSignup = findViewById(R.id.tvSignup)
         tvAccount = findViewById(R.id.tvAccount)
 
-//        btnLogin.setOnClickListener {
-//            validateForm()
-//        }
         btnLogin.setOnClickListener {
             validateForm()
             val intent=Intent(this,HomeActivity::class.java)
