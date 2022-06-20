@@ -21,32 +21,32 @@ class HomeActivity : AppCompatActivity() {
 
     fun castViews() {
         binding.fcvHome
-        binding.bottomNavigationView
+        binding.bnvHome
 
 
     }
 
     fun setBottomNav() {
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+        binding.bnvHome.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.plan -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fcvHome, PlanFragment())
                         .commit()
                     true
-
                 }
+
                 R.id.track -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fcvHome, TrackFragment())
                         .commit()
                     true
-
                 }
+
                 R.id.profile -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fcvHome, ProfileFragment()).commit()
                     true
-
                 }
+
                 else -> false
             }
         }
