@@ -1,13 +1,18 @@
-package dev.mundu.workoutlog
+package dev.mundu.workoutlog.ui
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentContainerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import dev.mundu.workoutlog.R
 import dev.mundu.workoutlog.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
-//    lateinit var fcvHome:FragmentContainerView
-//    lateinit var bnvHome:BottomNavigationView
+    lateinit var fcvHome: FragmentContainerView
+    lateinit var bnvHome: BottomNavigationView
+    lateinit var sharedPrefs:SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,14 +21,19 @@ class HomeActivity : AppCompatActivity() {
         castViews()
         setBottomNav()
 
-
+binding.tvLogOut.setOnClickListener {
+    val editor = sharedPrefs.edit()
+    editor.putString("ACCESS_TOKEN", "")
+    editor.putString("USER_ID", "")
+    editor.putString("USER_ID", "")
+    editor.putString("PROFILE_ID", "")
+    editor.apply()
+}
     }
 
     fun castViews() {
         binding.fcvHome
         binding.bnvHome
-
-
     }
 
     fun setBottomNav() {
