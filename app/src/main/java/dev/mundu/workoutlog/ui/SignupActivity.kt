@@ -28,7 +28,11 @@ class SignupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSignup.setOnClickListener {
+<<<<<<< HEAD
             valRegistraionForm()
+=======
+            validateForm()
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4
 
         }
 
@@ -42,8 +46,13 @@ class SignupActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         userViewModel.loginResponseLivedata.observe(this, Observer { registerResponse->
+<<<<<<< HEAD
             Toast.makeText(baseContext,registerResponse.message,Toast.LENGTH_LONG).show()
             startActivity(Intent(baseContext,LoginActivity::class.java))
+=======
+            Toast.makeText(baseContext,registerResponse?.message,Toast.LENGTH_LONG).show()
+            startActivity(Intent(this@SignupActivity,LoginActivity::class.java))
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4
         })
         userViewModel.loginErrorliveData.observe(this, Observer { error->
             Toast.makeText(baseContext,error,Toast.LENGTH_LONG).show()
@@ -51,7 +60,13 @@ class SignupActivity : AppCompatActivity() {
     }
 
 
+<<<<<<< HEAD
     fun valRegistraionForm() {
+=======
+
+
+    fun validateForm() {
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4
         var firstname = binding.etFirstname.text.toString()
         var lastname = binding.etLastname.text.toString()
         var email = binding.etEmail1.text.toString()
@@ -146,4 +161,32 @@ class SignupActivity : AppCompatActivity() {
 //            makeRegistrationRequest(registerRequest)
 //        }
 //    }
+<<<<<<< HEAD
 //
+=======
+//fun makeRegistrationRequest(registerRequest: RegisterRequest){
+//    val apiClient= ApiClient.buildApiClient(ApiInterface::class.java)
+//    val request = apiClient.registerUser(registerRequest)
+//
+//    request.enqueue(object : Callback<RegisterResponse> {
+//        override fun onResponse(
+//            call: Call<RegisterResponse>,
+//            response: Response<RegisterResponse>
+//        ) {
+// if(response.isSuccessful){
+//     val message = response.body()?.message
+//     Toast.makeText(baseContext, message, Toast.LENGTH_LONG).show()
+//     //intent to login
+// } else{
+//     val error = response.errorBody()?.string()
+//     Toast.makeText (baseContext, error, Toast.LENGTH_LONG).show()
+// }
+//        }
+//        override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+//           Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+//        }
+//    })
+//}
+//
+//}
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4

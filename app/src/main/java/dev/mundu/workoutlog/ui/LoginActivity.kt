@@ -11,7 +11,10 @@ import androidx.lifecycle.Observer
 import dev.mundu.workoutlog.databinding.ActivityLoginBinding
 import dev.mundu.workoutlog.models.LoginRequest
 import dev.mundu.workoutlog.models.LoginResponse
+<<<<<<< HEAD
 import dev.mundu.workoutlog.utils.Constants
+=======
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4
 import dev.mundu.workoutlog.viewmodel.UserViewModel
 
 
@@ -72,12 +75,20 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun saveLoginDetails(loginResponse: LoginResponse){
+<<<<<<< HEAD
         val editor = sharedPrefs.edit()
         val token = "Bearer ${loginResponse.accessToken}"
        )
         editor.putString(Constants.accessToken, loginResponse.accessToken)
         editor.putString(Constants.useId, loginResponse.userId)
         editor.putString(Constants.profileId, loginResponse.profileId)
+=======
+val editor = sharedPrefs.edit()
+        editor.putString("ACCESS_TOKEN", loginResponse.accessToken)
+        editor.putString("USER_ID", loginResponse.accessToken)
+        editor.putString("USER_ID", loginResponse.userId)
+        editor.putString("PROFILE_ID", loginResponse.profileId)
+>>>>>>> f4f2612b1ac57d7ba002a23e85483bc7e2336bc4
         editor.apply()
     }
 }
